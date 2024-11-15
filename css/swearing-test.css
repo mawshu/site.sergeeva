@@ -1,0 +1,153 @@
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основной стиль для body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0; 
+}
+
+/* Контейнер для теста */
+#quiz-container {
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовков */
+h1 {
+    text-align: center;
+}
+
+/* Контейнер вопросов */
+#question-container {
+    margin-top: 20px;
+}
+
+/* Стили для блока с вопросом */
+.question-block {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.question-block:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+.question-block h2 {
+    font-size: 1em; 
+}
+
+/* Маркеры для ответов */
+.incorrect-answer-mark, .correct-answer-mark {
+    font-size: 1.5em;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.incorrect-answer-mark {
+    color: red; 
+}
+
+.correct-answer-mark {
+    color: green; 
+}
+
+/* Стили для ответов */
+.answer {
+    margin-top: 10px;
+    display: block;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.answer:hover {
+    background-color: #ececec;
+    transform: scale(1.05);
+}
+
+/* Скрытые элементы */
+.hidden {
+    display: none;
+}
+
+/* Стили для правильных и неправильных ответов */
+.correct {
+    border-color: green;
+}
+
+.incorrect {
+    border-color: red;
+}
+
+/* Анимация для тряски */
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Анимация для плавного появления */
+.slide-down {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Статистика */
+#stat-container {
+    margin: 10px 0; 
+    background-color: rgb(255, 170, 170); 
+    color: white; 
+    padding: 10px;
+    border-radius: 5px; 
+}
+
+/* Обзор вопросов */
+.question-review {
+    margin: 10px 0; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.8em; 
+}
+
+.question-review:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); 
+}
+
+header, footer {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+}

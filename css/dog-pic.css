@@ -1,0 +1,361 @@
+.dog-pic {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    margin: auto;
+}
+
+/* Трава */
+.grass {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    padding-left: 0; 
+    padding-right: 0; 
+    background:  linear-gradient(to right, lightgreen, white 30%, green 70%, lightgreen 90%);
+    height: 80px; 
+}
+
+.grass-blade {
+    margin-top: 67px;
+    width: 25px;
+    height: 25px;
+    border: 4px solid rgb(0, 168, 0);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+
+/* Солнце */
+.sun {
+    width: 90px;
+    height: 90px;
+    background-color: rgba(255, 166, 0, 0.826);
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    right: 130px;
+    box-shadow: 0 0 100px 30px orange;
+}
+
+
+/* Собака */
+.dog {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+
+/* Тело собаки */
+.body {
+    width: 90px;
+    height: 50px;
+    background: radial-gradient( #c16d31 ,#7d3a0a 30%, #472106 80%);
+    border-radius: 50px / 30px;
+    position: relative;
+}
+
+/* Голова собаки */
+.head {
+    width: 45px;
+    height: 50px;
+    background: radial-gradient( #c16d31 ,#7d3a0a 30%, #472106 80%);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: -8px;
+}
+
+/* Уши собаки */
+.ear {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient( #7d3a0a, #472106);
+    border: 1px solid #472106;
+    border-radius: 50%;
+    position: absolute; 
+}
+
+.left-ear {
+    top: 0;
+    left: -15px;
+}
+
+.right-ear {
+    top: 0;
+    left: 25px; 
+}
+
+/* Морда собаки */
+.snout {
+    width: 20px;
+    height: 23px;
+    background-color: #632e08;
+    border: 1px solid #472106;
+    border-radius: 48%;
+    position: absolute;
+    bottom: -7px;
+}
+
+.left-snout {
+    left: 5px;
+}
+
+.right-snout {
+    left: 22px;
+}
+
+/* Точки на мордочке */
+.speck {
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Точки на левой стороне мордочки */
+.left-speck1 {
+    top: 10px;
+    left: 4px;
+}
+
+.left-speck2 {
+    top: 10px;
+    right: 4px;
+}
+
+.left-speck3 {
+    top: 15px;
+    left: 7px;
+}
+
+/* Точки на правой стороне мордочки */
+.right-speck1 {
+    top: 10px;
+    left: 4px;
+}
+
+.right-speck2 {
+    top: 10px;
+    right: 4px;
+}
+
+.right-speck3 {
+    top: 15px;
+    left: 7px;
+}
+
+
+
+/* Глаза */
+.eye {
+    width: 10px;
+    height: 13px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.left-eye {
+    left: 10px;
+    top: 20px;
+}
+
+.right-eye {
+    right: 10px;
+    top: 20px;
+}
+
+/* Зрачки */
+.pupil {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.left-pupil {
+    left: 1px;
+    top: 6px;
+}
+
+.right-pupil {
+    right: 1px;
+    top: 6px;
+}
+
+/* Брови */
+.brow {
+    width: 10px;
+    height: 3px;
+    background-color: black;
+    border-radius: 30%;
+    position: absolute;
+}
+
+.left-brow {
+    right: 3px;
+    top: -3px;
+    transform: rotate(-30deg);
+}
+
+.right-brow {
+    left: 3px;
+    top: -3px;
+    transform: rotate(-150deg);
+}
+
+/* Нос */
+.nose {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 9px solid black;
+    transform: rotate(180deg);
+    position: absolute;
+    top: 33px;
+    left: 17px;
+}
+
+/* Лапы */
+.paw {
+    width: 20px;
+    height: 23px;
+    background-color: #472106;
+    border-radius: 45%;
+    position: absolute;
+    bottom: -8px;
+}
+
+.paw1 {
+    left: -20px;
+}
+
+.paw2 {
+    left: 30px;
+}
+
+.paw3 {
+    left: 50px;
+}
+
+.paw4 {
+    left: 70px;
+}
+
+/* Когти */
+.claw {
+    width: 2px;
+    height: 8px;
+    background-color: black;
+    border-radius: 40%;
+    position: absolute;
+}
+
+/* Когти на paw1 */
+.claw1-1 {
+    left: 5px;
+    bottom: 1px;
+}
+
+.claw1-2 {
+    left: 9px;
+    bottom: 1px;
+}
+
+.claw1-3 {
+    left: 13px;
+    bottom: 1px;
+}
+
+/* Когти на paw2 */
+.claw2-1 {
+    left: 5px;
+    bottom: 1px;
+}
+
+.claw2-2 {
+    left: 9px;
+    bottom: 1px;
+}
+
+.claw2-3 {
+    left: 13px;
+    bottom: 1px;
+}
+
+/* Когти на paw3 */
+.claw3-1 {
+    left: 5px;
+    bottom: 1px;
+}
+
+.claw3-2 {
+    left: 9px;
+    bottom: 1px;
+}
+
+.claw3-3 {
+    left: 13px;
+    bottom: 1px;
+}
+
+/* Когти на paw4 */
+.claw4-1 {
+    left: 5px;
+    bottom: 1px;
+}
+
+.claw4-2 {
+    left: 9px;
+    bottom: 1px;
+}
+
+.claw4-3 {
+    left: 13px;
+    bottom: 1px;
+}
+
+/* Хвост в виде дуги */
+.tail {
+    position: absolute;
+    top: -10px; 
+    right: -5px;
+}
+
+/* Внешний контур хвоста */
+.tail-outer {
+    width: 30px; 
+    height: 20px; 
+    background-color: #472106; 
+    border-radius: 40px 40px 0 0; 
+    position: absolute;
+    transform-origin: left; 
+    transform: rotate(140deg);
+}
+
+/* Внутренний контур хвоста */
+.tail-inner {
+    width: 30px; 
+    height: 18px; 
+    background-color: white; 
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    transform: rotate(130deg);
+    top: 7px; 
+    left: -28px; 
+} 
+    
+
+
+
+

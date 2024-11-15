@@ -1,0 +1,223 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;  
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    background-color: #f4f7f6;
+    line-height: 1.6;
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+/* Шапка */
+.header {
+    background-color: #A7C6ED; 
+    color: #4B4B4B;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #93A9C8;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 60px;
+    height: auto;
+}
+
+.menu a {
+    margin: 0 15px;
+    color: #4B4B4B;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #6E8CFF;
+}
+
+/* Основные стили для логотипа */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Круглый элемент логотипа */
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #2E4053, #537294); 
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+/* Текстовая часть логотипа */
+.text {
+    font-size: 24px;
+    color: #2E4053;  
+}
+
+/* Эффект при наведении */
+.logo:hover .circle {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.logo:hover .text {
+    color: #1a242e;  
+    transform: translateY(-5px);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+/* Главный блок (Hero Section) */
+.hero {
+    background-color: #E1F3F1;
+    color: #4B4B4B;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #2E4053;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #4B4B4B;
+}
+
+/* Основной контент */
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    color: #6E8CFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+/* Стили для контейнера изображения */
+.image-container {
+    position: relative;
+    display: block;
+    margin: 20px auto; 
+    text-align: center;
+    max-width: 300px; 
+}
+
+/* Стили для изображения */
+.content-img {
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для подписи под изображением */
+figcaption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Стили для всплывающей подсказки */
+.tooltip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+/* Отображение подсказки при наведении на изображение */
+.image-container:hover .tooltip {
+    opacity: 1;
+}
+
+/* Стиль для ссылки на тест */
+.test-link {
+    color: #5A9;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.test-link:hover {
+    color: #47a;
+    text-decoration: underline;
+}
+
+
+/* Футер */
+.footer {
+    background-color: #A7C6ED; 
+    color: #4B4B4B;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: auto; 
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .header, .hero, .footer {
+        text-align: center;
+        padding: 10px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu a {
+        margin: 5px 0;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+}
