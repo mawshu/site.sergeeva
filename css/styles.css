@@ -17,6 +17,7 @@ body {
     display: flex; 
     flex-direction: column; 
     min-height: 100vh; 
+    padding-top: 60px; 
 }
 
 /* Шапка */
@@ -27,8 +28,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: fixed; /* Закрепляем шапку сверху */
+    top: 0; /* Позиция сверху */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* На переднем плане */
+    transition: top 0.3s ease-in-out; /* Плавное появление/скрытие */
+    width: 100%; /* Растягиваем шапку на всю ширину */
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -42,7 +50,6 @@ header {
 .nav-menu {
     list-style: none;
     display: flex;
-    flex-direction: row; 
     margin: 0;
     padding: 0;
 }
@@ -51,13 +58,12 @@ header {
     text-decoration: none;
     color: #333;
     padding: 10px 20px;
-    border-bottom: 2px solid #5e7085; 
+    border-bottom: 1px solid #5e7085; 
     text-align: center; 
     display: flex; 
     justify-content: center; 
     align-items: center; 
 }
-
 
 .menu-toggle {
     display: none; 
@@ -73,8 +79,9 @@ header {
     background-color: #A7C6ED;
 }
 
+/* Стили для активного состояния меню */
 .nav-menu.active {
-    display: flex; 
+    display: flex; /* Показываем меню */
 }
 
 /* Основные стили для логотипа */
@@ -124,7 +131,7 @@ header {
     background-color: #E1F3F1;
     color: #6f849d;
     text-align: center;
-    padding: 100px 20px;
+    padding: 30px 20px;
     border-radius: 10px;
     margin: 20px auto;
     max-width: 900px;
@@ -241,8 +248,8 @@ figcaption {
         flex-direction: column; /* Вертикальное меню */
         position: absolute;
         top: 100%; /* Под кнопкой "Меню" */
-        left: 0;
-        width: 100%;
+        right: 0; /* Выравнивание меню справа */
+        width: 200px; /* Ширина меню */
         background-color: #fff; /* Белый фон */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 10;
@@ -251,7 +258,47 @@ figcaption {
     .nav-menu a {
         color: #333; /* Темный цвет текста */
         padding: 10px 20px;
-        border-bottom: 1px solid #eee; /* Разделители между пунктами */
+        text-align: left;
+    }
+
+    .nav-menu a:hover {
+        background-color: #f5f5f5;
+    }
+
+    header {
+        /* Плавное скрытие и отображение хедера */
+        transition: top 0.3s ease-in-out;
+    }
+
+    body {
+        padding-top: 60px; /* Отступ для мобильных */
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: block; /* Показываем кнопку на больших экранах */
+    }
+
+    .nav-menu {
+        display: none; /* Скрыто по умолчанию */
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Под кнопкой */
+        right: 0; /* Выравнивание меню справа */
+        width: 200px; /* Ширина меню */
+        background-color: #fff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .nav-menu.active {
+        display: flex; /* Показываем меню */
+    }
+
+    .nav-menu a {
+        color: #333; /* Темный цвет текста */
+        padding: 10px 20px;
         text-align: left;
     }
 
@@ -260,22 +307,6 @@ figcaption {
     }
 }
 
-@media (min-width: 769px) {
-    .menu-toggle {
-        display: none; /* Прячем кнопку на больших экранах */
-    }
-
-    .nav-menu {
-        display: flex; /* Показываем горизонтальное меню */
-        position: static;
-        background: none;
-        flex-direction: row;
-        box-shadow: none;
-    }
-
-    .nav-menu a {
-        color: #fff; /* Белый текст на темном фоне */
-        border-bottom: none;
-    }
+header.hidden {
+    top: -100px; 
 }
-
