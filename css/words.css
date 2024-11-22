@@ -1,0 +1,137 @@
+
+/* Контейнер для всех блоков */
+.blocks-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; 
+    width: 100%;
+}
+
+/* Блок для ввода и кнопки */
+.input-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.input-container input {
+    flex: 1;
+    min-width: 150px; 
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(255, 94, 94);
+    border-radius: 5px;
+}
+
+.input-container button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(255, 94, 94);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+    background-color: rgb(200, 50, 50);
+}
+
+/* Третий блок (верхний) */
+#block3 {
+    border: 1px solid rgb(166, 166, 166);
+    background-color: lightgray;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 98%; 
+    min-height: 70px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Второй блок (нижний левый) */
+#block2 {
+    border: 1px solid rgb(96, 96, 255);
+    background-color: rgb(183, 183, 249);
+    margin: 10px;
+    padding: 10px;
+    width: 50%; 
+    min-height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+}
+
+/* Первый блок (нижний правый) */
+#block1 {
+    border: 1px solid rgb(255, 85, 85);
+    background-color: rgb(241, 167, 167);
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+    min-height: 200px;
+}
+
+/* Строка для вывода */
+#displayLine {
+    border: 1px solid rgb(255, 94, 94);
+    background-color: white;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+}
+
+/* Элементы-слова */
+.word {
+    padding: 5px 20px;
+    margin: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    cursor: grab;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: gray;
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+
+/* Мобильная версия */
+@media screen and (max-width: 768px) {
+    .blocks-container {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center; 
+    }
+
+    .input-container input, .input-container button {
+        width: 100%; 
+    }
+
+    .input-container button {
+        margin-top: 10px;
+    }
+
+    #block3, #block2, #block1 {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

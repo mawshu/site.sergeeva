@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слова</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/words.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="circle"></div>
+            <span class="text">Kultura</span>
+        </div>
+        <button class="menu-toggle" aria-label="Открыть меню">
+            ☰
+        </button>
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+                <li><a href="../art.html">Искусство</a></li>
+                <li><a href="../traditions.html">Традиции</a></li>
+                <li><a href="../literature.html">Литература</a></li>
+                <li><a href="../language.html">Язык</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <div id="block3" class="block"></div>
+        <div class="blocks-container">
+            <div id="block2" class="block"></div>
+            <div id="block1" class="block">
+                <div class="input-container">
+                    <input id="wordInput" type="text" placeholder="Введите строку...">
+                    <button onclick="processWords()">Разобрать</button>
+                </div>
+                <div id="displayLine" class="display-line"></div> 
+            </div>
+            
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Культура России. Все права защищены.</p>
+    </footer>
+    
+    <script src="../js/words.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
